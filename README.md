@@ -1,4 +1,4 @@
-# Wordpress-Multisite-On-GKE
+# Wordpress Multisite On GKE
 
 
 ### TO-DO:
