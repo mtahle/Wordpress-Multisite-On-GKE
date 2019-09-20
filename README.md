@@ -10,14 +10,14 @@
 - [x] wordpress with CloudSQL
 
 
-kubectl apply -k ./
 
 
-# Update a container's image; spec.containers[*].name is required because it's a merge key
-kubectl patch pod wordpress-5c8c5d94c9-56fk2 -p '{"spec":{"containers":[{"name":"wordpress","image":"mtahle/wordpress:ms"}]}}'
+#### Update a container's image; spec.containers[*].name is required because it's a merge key
 
-//connection name
-terrafrom-learning:us-central1:k8s-mysql
+``` kubectl patch pod wordpress-5c8c5d94c9-56fk2 -p '{"spec":{"containers":[{"name":"wordpress","image":"mtahle/wordpress:ms"}]}}' ``` 
 
-kubectl create secret generic cloudsql-db-credentials --from-literal=username=wp --from-literal=password=wp
- kubectl create secret generic cloudsql-instance-credentials --from-file=credentials.json=terrafrom-learning-3c3bfb7d6a47.json 
+
+#### create secrets 
+
+~~~~ kubectl create secret generic cloudsql-db-credentials --from-literal=username=wp --from-literal=password=wp
+ kubectl create secret generic cloudsql-instance-credentials --from-file=credentials.json=terrafrom-learning-3c3bfb7d6a47.json ~~~~ 
